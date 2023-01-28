@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>box button</title>
+
+    <link rel="stylesheet" href="stylesheet.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <h1>Button</h1>
+
+    <div class="container">
+      <div class="frame">
+        <div class="box" id="boxSpin">
+          <div class="boxContainer front"></div>
+          <div class="boxContainer back"></div>
+          <div class="boxContainer left"></div>
+          <div class="boxContainer right"></div>
+          <div class="boxContainer top"></div>
+          <div class="boxContainer bottom"></div>
+          <div class="btn" onclick="clickBtn()" id="btnClick">
+            <div class="frontBtn"><p>Click me!</p></div>
+            <div class="topBtn"></div>
+            <div class="bottomBtn"></div>
+            <div class="leftBtn"></div>
+            <div class="rightBtn"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="textsInfo">
+      <p>3d Button spin using css & js.</p>
+      <a href="https://github.com/JacobSaucelo/3dButtonCssArt">
+        <p>Code: JacobSaucelo/3dButtonCssArt</p>
+      </a>
+      <a href="https://github.com/JacobSaucelo">
+        <p>Github: github.com/JacobSaucelo</p>
+      </a>
+      <h1>1 - 28 - 23</h1>
+    </div>
+
+    <script>
+      let active = false;
+      buttt = document.querySelector("#btnClick");
+      boxx = document.querySelector("#boxSpin");
+
+      function clickBtn() {
+        active = !active;
+
+        buttt.style.transform = active
+          ? "translateZ(60px)"
+          : "translateZ(70px)";
+
+        if (active) {
+          boxx.classList.add("bosss");
+        } else {
+          boxx.classList.remove("bosss");
+        }
+      }
+    </script>
+  </body>
+</html>

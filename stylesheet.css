@@ -1,0 +1,150 @@
+/* font-family: 'Bebas Neue', cursive;
+font-family: 'Inter', sans-serif; */
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+}
+
+body h1 {
+  color: white;
+  font-family: "Bebas Neue", cursive;
+  font-size: 3rem;
+  text-align: center;
+}
+
+.frame {
+  perspective: 600px;
+  height: 200px;
+  width: 200px;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box {
+  transform-style: preserve-3d;
+  position: absolute;
+  height: 150px;
+  width: 150px;
+  transform: rotateX(-30deg) rotateY(-20deg);
+}
+
+.bosss {
+  animation: 3s ease-in-out spinIt;
+}
+
+.boxContainer {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border: 1px solid rgba(15, 179, 255, 0.69);
+  /* box-shadow: 0px 0px 10px 6px rgba(15, 179, 255, 0.69); */
+}
+
+.front {
+  background-color: #001b89;
+  transform: translateZ(75px);
+}
+.back {
+  background-color: #0334d1;
+  transform: translateZ(-75px);
+}
+.left {
+  background-color: #001b89;
+  transform: translateX(-75px) rotateY(90deg);
+}
+.right {
+  background-color: #000c54;
+  transform: translateX(75px) rotateY(90deg);
+}
+.top {
+  background-color: #00011c;
+  transform: translateY(75px) rotateX(90deg);
+}
+.bottom {
+  background-color: #0334d1;
+  transform: translateY(-75px) rotateX(90deg);
+}
+
+.btn {
+  transform-style: preserve-3d;
+  position: absolute;
+  height: 150px;
+  width: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateZ(70px);
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.btn div {
+  position: absolute;
+  background-color: #e5079c;
+  border: 1px solid rgba(225, 95, 103, 0.69);
+
+  /* box-shadow: 0px 0px 10px 6px rgba(225, 95, 103, 0.69); */
+}
+
+.frontBtn {
+  height: 40px;
+  width: 80px;
+  transform: translateZ(20px);
+}
+
+.topBtn {
+  height: 40px;
+  width: 80px;
+  transform: translateY(-20px) rotateX(90deg);
+}
+.bottomBtn {
+  height: 40px;
+  width: 80px;
+  transform: translateY(20px) rotateX(90deg);
+}
+.leftBtn {
+  height: 40px;
+  width: 40px;
+  transform: translateX(-40px) rotateY(90deg);
+}
+.rightBtn {
+  height: 40px;
+  width: 40px;
+  transform: translateX(40px) rotateY(90deg);
+}
+
+@keyframes spinIt {
+  0% {
+    transform: rotateX(-30deg) rotateY(-20deg);
+  }
+  50% {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+  100% {
+    transform: rotateX(-30deg) rotateY(-20deg);
+  }
+}
+
+.textsInfo {
+  padding: 1rem;
+  color: white;
+  font-family: "Inter", sans-serif;
+}
+.textsInfo p {
+  text-align: center;
+}
+
+.textsInfo h1 {
+  color: #f0db4f;
+}
